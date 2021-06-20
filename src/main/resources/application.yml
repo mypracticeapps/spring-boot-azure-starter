@@ -1,0 +1,8 @@
+application:
+  development:
+    response:
+      stackTrace: true
+      cors: true
+    endpoints:
+      errorctrl: true
+      samplectrl: true
