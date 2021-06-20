@@ -45,8 +45,6 @@ public class ErrorCtrl {
             InputStream stream = resource.getInputStream();
             List<Map<String, Object>> _conf = (List<Map<String, Object>>) new Yaml().load(stream);
             for (Map<String, Object> map : _conf) {
-                // status value type is integer. but values in map or string. this causing serialization issue
-//                map.put("status", map.get("status") + "");
                 if (map.containsKey("whenToUse")) {
                     map.remove("whenToUse");
                 }
