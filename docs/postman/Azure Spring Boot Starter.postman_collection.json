@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "ab3668fe-659d-47a4-84e7-057cf6c3381d",
+		"name": "Azure Spring Boot Starter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Error Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/internal/error/codes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"internal",
+						"error",
+						"codes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Status Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/internal/error/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"internal",
+						"error",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Key Vault Sample",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/keyvault",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"keyvault"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ok Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/ok/single",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"ok",
+						"single"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collection Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/ok/multiple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"ok",
+						"multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/error/notfound",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"error",
+						"notfound"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upstream Error Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/error/upstream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"error",
+						"upstream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Error Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sample/error/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sample",
+						"error",
+						"form"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
