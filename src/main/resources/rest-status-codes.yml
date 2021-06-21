@@ -11,6 +11,10 @@
   description:  Accepted
   whenToUse:    Request has been accepted but not immediately proccess.
 
+- status:       207
+  description:  Multi-Status code
+  whenToUse:    Partial success for PUT or POST. Some documents succeeded, but at least one failed. Ex when bulk delete request from user, we may be able to delete some documents but not all.
+
 - status:       400
   description:  Bad Request
   whenToUse:    try to avoid 400 for validation. for simplicity both syntactical and semantical validation use 422. use 400 only as generic error code and only when no other 4xx code in sutable for your purpose
