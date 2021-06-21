@@ -12,8 +12,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     @Value("${application.development.response.stackTrace:false}")
     private boolean isGlobalCorsEnabled;
-
-
+    
     @Override
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
         configurer.defaultContentType(MediaType.APPLICATION_JSON);
