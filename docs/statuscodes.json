@@ -1,0 +1,66 @@
+[
+  {
+    "status": 200,
+    "description": "Ok"
+  },
+  {
+    "status": 201,
+    "description": "Created"
+  },
+  {
+    "status": 202,
+    "description": "Accepted"
+  },
+  {
+    "status": 207,
+    "description": "Multi-Status code"
+  },
+  {
+    "status": 400,
+    "description": "Bad Request"
+  },
+  {
+    "status": 401,
+    "description": "Unauthorized"
+  },
+  {
+    "status": 403,
+    "description": "Forbidden"
+  },
+  {
+    "status": 404,
+    "description": "Not Found"
+  },
+  {
+    "status": 405,
+    "description": "(Spring) Method Not Allowed"
+  },
+  {
+    "status": 406,
+    "description": "(Spring) Not Acceptable"
+  },
+  {
+    "status": 409,
+    "description": "Conflict"
+  },
+  {
+    "status": 415,
+    "description": "(Spring) Unsupported Media Type"
+  },
+  {
+    "status": 422,
+    "description": "Unprocessable Entity"
+  },
+  {
+    "status": 500,
+    "description": "Internal Server Error"
+  },
+  {
+    "status": 501,
+    "description": "Not Implemented"
+  },
+  {
+    "status": 502,
+    "description": "Bad Gateway"
+  }
+]

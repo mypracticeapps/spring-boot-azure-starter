@@ -1,0 +1,22 @@
+[
+  {
+    "code": "UPSTREAM_ERROR",
+    "message": "an upstream service currently unavailable. therefore we are not able to full fill your request at this time"
+  },
+  {
+    "code": "RESOURCE_NOT_FOUND",
+    "message": "resource not found"
+  },
+  {
+    "code": "INVALID_FORM",
+    "message": "one or more form fields does not pass validation"
+  },
+  {
+    "code": "ID_LENGTH_INVALID",
+    "message": "ID field length should be between 5 to 10 chars"
+  },
+  {
+    "code": "ID_SPECIAL_CHAR_NOT_ALLOWED",
+    "message": "Special characters are allowed in id"
+  }
+]

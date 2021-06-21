@@ -1,0 +1,83 @@
+{
+  "timestamp": 1624278192669,
+  "status": 200,
+  "data": {
+    "address": {
+      "street": "Summer Place",
+      "streetNumber": "129",
+      "apartmentNumber": "19",
+      "postalCode": "18012",
+      "city": "San Francisco",
+      "addressLine2": "San Francisco 18012",
+      "addressLine1": "129 Summer Place APT 19"
+    },
+    "firstName": "Molly",
+    "middleName": "",
+    "lastName": "Hodge",
+    "email": "hodge@mail.com",
+    "username": "mollyh",
+    "password": "q1jQPPNK",
+    "sex": "FEMALE",
+    "telephoneNumber": "147-950-9940",
+    "dateOfBirth": {
+      "monthOfYear": 10,
+      "millisOfDay": 36287349,
+      "hourOfDay": 10,
+      "minuteOfHour": 4,
+      "secondOfMinute": 47,
+      "millisOfSecond": 349,
+      "weekOfWeekyear": 41,
+      "weekyear": 1986,
+      "yearOfEra": 1986,
+      "yearOfCentury": 86,
+      "centuryOfEra": 19,
+      "secondOfDay": 36287,
+      "minuteOfDay": 604,
+      "era": 1,
+      "dayOfYear": 281,
+      "dayOfWeek": 3,
+      "year": 1986,
+      "dayOfMonth": 8,
+      "zone": {
+        "uncachedZone": {
+          "cachable": true,
+          "fixed": false,
+          "id": "Asia/Kolkata"
+        },
+        "fixed": false,
+        "id": "Asia/Kolkata"
+      },
+      "millis": 529130087349,
+      "chronology": {
+        "zone": {
+          "uncachedZone": {
+            "cachable": true,
+            "fixed": false,
+            "id": "Asia/Kolkata"
+          },
+          "fixed": false,
+          "id": "Asia/Kolkata"
+        }
+      },
+      "afterNow": false,
+      "beforeNow": true,
+      "equalNow": false
+    },
+    "age": 34,
+    "company": {
+      "name": "Buapel",
+      "domain": "buapel.com",
+      "email": "company@buapel.com",
+      "vatIdentificationNumber": "34-0000377",
+      "url": "http://www.buapel.com"
+    },
+    "companyEmail": "molly.hodge@buapel.com",
+    "nationalIdentityCardNumber": "859-51-3728",
+    "nationalIdentificationNumber": "",
+    "passportNumber": "IEeJSwjKT",
+    "male": false,
+    "female": true,
+    "fullName": "Molly Hodge"
+  },
+  "collection": false
+}
