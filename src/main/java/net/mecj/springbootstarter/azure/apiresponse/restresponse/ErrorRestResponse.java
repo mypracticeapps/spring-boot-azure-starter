@@ -22,42 +22,42 @@ public class ErrorRestResponse extends RestResponse {
     private Object stackTrace[];
 
     public static ErrorRestResponse badRequest() {
-        return status(400);
+        return status(HttpStatus.BAD_REQUEST);
     }
 
     public static ErrorRestResponse unauthorized() {
-        return status(401);
+        return status(HttpStatus.UNAUTHORIZED);
     }
 
     public static ErrorRestResponse forbidden() {
-        return status(403);
+        return status(HttpStatus.FORBIDDEN);
     }
 
     public static ErrorRestResponse notFound() {
-        return status(404);
+        return status(HttpStatus.NOT_FOUND);
     }
 
     public static ErrorRestResponse conflict() {
-        return status(409);
+        return status(HttpStatus.CONFLICT);
     }
 
     public static ErrorRestResponse validationError() {
-        return status(422);
+        return status(HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     public static ErrorRestResponse unknown() {
-        return status(500);
+        return status(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     public static ErrorRestResponse notImplemented() {
-        return status(501);
+        return status(HttpStatus.NOT_IMPLEMENTED);
     }
 
     public static ErrorRestResponse upstreamError() {
-        return status(502);
+        return status(HttpStatus.BAD_GATEWAY);
     }
 
-    private static ErrorRestResponse status(int status) {
+    private static ErrorRestResponse status(HttpStatus status) {
         ErrorRestResponse restResponse = new ErrorRestResponse();
         restResponse.setStatus(status);
         return restResponse;
@@ -100,6 +100,6 @@ public class ErrorRestResponse extends RestResponse {
 
     @Override
     public ResponseEntity responseEntity() {
-        return new ResponseEntity(this, HttpStatus.valueOf(this.getStatus()));
+        return new ResponseEntity(this, super.getStatus());
     }
 }

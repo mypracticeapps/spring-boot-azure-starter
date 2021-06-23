@@ -14,18 +14,18 @@ public class OkRestResponse extends RestResponse {
     private boolean isCollection; // if -1 then data is object or null. if 0 or > 0 then data is collection
 
     public static OkRestResponse ok(Object data) {
-        return status(200).data(data);
+        return status(HttpStatus.OK).data(data);
     }
 
     public static OkRestResponse created(Object data) {
-        return status(201).data(data);
+        return status(HttpStatus.CREATED).data(data);
     }
 
     public static OkRestResponse accepted(Object data) {
-        return status(202).data(data);
+        return status(HttpStatus.ACCEPTED).data(data);
     }
 
-    private static OkRestResponse status(int status) {
+    private static OkRestResponse status(HttpStatus status) {
         OkRestResponse restResponse = new OkRestResponse();
         restResponse.setStatus(status);
         return restResponse;
@@ -42,9 +42,9 @@ public class OkRestResponse extends RestResponse {
     public ResponseEntity responseEntity() {
         ResponseEntity responseEntity;
         if (data == null) {
-            responseEntity = new ResponseEntity(HttpStatus.valueOf(this.getStatus()));
+            responseEntity = new ResponseEntity(this.getStatus());
         } else {
-            responseEntity = new ResponseEntity(this, HttpStatus.valueOf(this.getStatus()));
+            responseEntity = new ResponseEntity(this, this.getStatus());
         }
         return responseEntity;
     }
