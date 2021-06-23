@@ -1,6 +1,6 @@
-package net.mecj.springbootstarter.azure.webrest.internal;
+package net.mecj.springbootstarter.azure.controllers;
 
-import net.mecj.springbootstarter.azure.AzureApplication;
+import net.mecj.springbootstarter.azure.AzureStarterApplication;
 import net.mecj.springbootstarter.azure.apiresponse.errordetail.ErrorDetail;
 import net.mecj.springbootstarter.azure.util.ClassFinder;
 import net.mecj.springbootstarter.azure.util.ClassUtil;
@@ -31,7 +31,7 @@ public class ErrorCtrl {
     private List<Map<String, Object>> statusCodes;
 
     private void initErrorCodes() {
-        String packageName = AzureApplication.class.getPackage().getName();
+        String packageName = AzureStarterApplication.class.getPackage().getName();
         Set<String> errorDetailImplementationClass = new ClassFinder(ErrorDetail.class, packageName).getClasses();
         Set<Class> classSet = ClassUtil.forStringValues(errorDetailImplementationClass);
         this.errorCodes = EnumUtil.values(classSet);

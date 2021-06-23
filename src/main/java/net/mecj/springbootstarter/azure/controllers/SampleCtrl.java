@@ -1,4 +1,4 @@
-package net.mecj.springbootstarter.azure.webrest.internal;
+package net.mecj.springbootstarter.azure.controllers;
 
 import io.codearte.jfairy.Fairy;
 import io.codearte.jfairy.producer.person.Person;
@@ -8,7 +8,6 @@ import net.mecj.springbootstarter.azure.constants.CommonResourceErrorCode;
 import net.mecj.springbootstarter.azure.constants.PersonValidationErrorCode;
 import net.mecj.springbootstarter.azure.constants.UpstreamErrorCode;
 import net.mecj.springbootstarter.azure.exception.AppException;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ import java.util.Map;
 @ConditionalOnExpression("${application.development.endpoints.samplectrl:false}")
 public class SampleCtrl {
 
-    @Value("${key-vault-key}")
+//    @Value("${key-vault-key}")
     private String secret;
 
     @GetMapping(path = "/sample/keyvault")

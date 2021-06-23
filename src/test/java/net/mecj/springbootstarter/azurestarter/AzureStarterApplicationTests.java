@@ -1,10 +1,10 @@
-//package net.mecj.springbootstarter.azure;
+//package net.mecj.springbootstarter.azurestarter;
 //
 //import org.junit.jupiter.api.Test;
 //import org.springframework.boot.test.context.SpringBootTest;
 //
 //@SpringBootTest
-//class AzureApplicationTests {
+//class AzureStarterApplicationTests {
 //
 //	@Test
 //	void contextLoads() {
