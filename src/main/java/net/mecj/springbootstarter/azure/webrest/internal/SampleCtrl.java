@@ -10,6 +10,7 @@ import net.mecj.springbootstarter.azure.constants.UpstreamErrorCode;
 import net.mecj.springbootstarter.azure.exception.AppException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -78,6 +79,11 @@ public class SampleCtrl {
                 .error(CommonResourceErrorCode.INVALID_FORM)
                 .fieldError("id", PersonValidationErrorCode.ID_LENGTH_INVALID)
                 .fieldError("id", PersonValidationErrorCode.ID_SPECIAL_CHAR_NOT_ALLOWED);
-        throw new AppException(formErrorRestResponse);
+
+        if (formErrorRestResponse.containsErrors()) {
+            throw new AppException(formErrorRestResponse);
+        } else {
+            return new ResponseEntity(HttpStatus.OK);
+        }
     }
 }

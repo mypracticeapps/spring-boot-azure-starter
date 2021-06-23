@@ -89,6 +89,10 @@ public class ErrorRestResponse extends RestResponse {
         return this;
     }
 
+    public boolean containsErrors() {
+        return error != null || subErrors.size() > 0;
+    }
+
     public void disableStackTraceAndCause() {
         this.stackTrace = null;
         this.cause = null;
