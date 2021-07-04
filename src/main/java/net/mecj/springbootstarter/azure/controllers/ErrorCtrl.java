@@ -5,6 +5,7 @@ import net.mecj.springbootstarter.azure.apiresponse.errordetail.ErrorDetail;
 import net.mecj.springbootstarter.azure.util.ClassFinder;
 import net.mecj.springbootstarter.azure.util.ClassUtil;
 import net.mecj.springbootstarter.azure.util.EnumUtil;
+import net.mecj.springbootstarter.azure.util.YmlUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
@@ -38,12 +39,8 @@ public class ErrorCtrl {
     }
 
     private void initStatusCodes() {
-        ResourceLoader resourceLoader = new DefaultResourceLoader();
-        Resource resource = resourceLoader.getResource("classpath:" + STATUS_CODE_FILE);
-
         try {
-            InputStream stream = resource.getInputStream();
-            List<Map<String, Object>> _conf = (List<Map<String, Object>>) new Yaml().load(stream);
+            List<Map<String, Object>> _conf = YmlUtil.loadAsList(STATUS_CODE_FILE);
             for (Map<String, Object> map : _conf) {
                 if (map.containsKey("whenToUse")) {
                     map.remove("whenToUse");
