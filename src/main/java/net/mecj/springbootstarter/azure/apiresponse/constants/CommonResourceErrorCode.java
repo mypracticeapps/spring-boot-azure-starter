@@ -1,4 +1,4 @@
-package net.mecj.springbootstarter.azure.constants;
+package net.mecj.springbootstarter.azure.apiresponse.constants;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import net.mecj.springbootstarter.azure.apiresponse.errordetail.ErrorDetail;
@@ -13,7 +13,7 @@ public enum CommonResourceErrorCode implements ErrorDetail {
 
     private String code, message;
 
-    private CommonResourceErrorCode(String code, String message) {
+    CommonResourceErrorCode(String code, String message) {
         assertThat(code).isNotEmpty();
         assertThat(message).isNotEmpty();
 

@@ -1,4 +1,4 @@
-package net.mecj.springbootstarter.azure.constants;
+package net.mecj.springbootstarter.azure.apiresponse.constants;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import net.mecj.springbootstarter.azure.apiresponse.errordetail.ErrorDetail;
@@ -6,12 +6,16 @@ import net.mecj.springbootstarter.azure.apiresponse.errordetail.ErrorDetail;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
-public enum UpstreamErrorCode implements ErrorDetail {
-    UPSTREAM_ERROR("UPSTREAM_ERROR", "an upstream service currently unavailable. therefore we are not able to full fill your request at this time");
+public enum PersonValidationErrorCode implements ErrorDetail {
+
+    ID_LENGTH_INVALID("ID_LENGTH_INVALID", "ID field length should be between 5 to 10 chars"),
+
+    ID_SPECIAL_CHAR_NOT_ALLOWED("ID_SPECIAL_CHAR_NOT_ALLOWED", "Special characters are allowed in id");
+
 
     private String code, message;
 
-    private UpstreamErrorCode(String code, String message) {
+    PersonValidationErrorCode(String code, String message) {
         assertThat(code).isNotEmpty();
         assertThat(message).isNotEmpty();
 
