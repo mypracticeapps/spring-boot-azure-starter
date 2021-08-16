@@ -2,7 +2,7 @@ variables:
   serviceConnectionName: TEST SERVICE CONNECTION
 
 pool:
-  name: azure-hosted-linux
+  name: azure-hosted-pool
   vmImage: ubuntu-linux
 
 steps:
